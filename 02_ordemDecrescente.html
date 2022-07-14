@@ -5,11 +5,26 @@
     */
 
     //ENTRADA
-
+    const numero1 = Number(prompt("Informe o primeiro número:"))
+    const numero2 = Number(prompt("Informe o segundo número:"))
+    const numero3 = Number(prompt("Informe o terceiro número:"))
 
     //PROCESSAMENTO
 
-    
+    if (numero2 >= numero3 && numero2 <= numero1){
+        document.write(`${numero1}, ${numero2}, ${numero3}`)
+    } else if (numero3 >= numero2 && numero3 <= numero1){
+        document.write(`${numero1}, ${numero3}, ${numero2}`)
+    } else if (numero1 >= numero3 && numero1 <= numero2){
+        document.write(`${numero2}, ${numero1}, ${numero3}`)
+    } else if (numero3 >= numero1 && numero3 <= numero2){
+        document.write(`${numero2}, ${numero3}, ${numero1}`)
+    } else if (numero1 >= numero2 && numero1 <= numero3){
+        document.write(`${numero3}, ${numero1}, ${numero2}`)
+    } else {
+        document.write(`${numero3}, ${numero2}, ${numero1}`)
+    }
+
     //SAÍDA
 
 
