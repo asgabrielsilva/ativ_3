@@ -6,12 +6,17 @@
     */
 
     //ENTRADA
-
+    let nr1 = Number(prompt("Informe um numero inteiro"))
+    let nr2 = Number(prompt("Informe um numero inteiro"))
 
     //PROCESSAMENTO
+    const troca = nr1
+    
+    nr1 = nr2
+    nr2 = troca
 
 
     //SAÍDA
-
-
+document.write(`Numero 1:${nr1}<br>`)
+document.write(`Numero 2:${nr2}`)
 </script>
