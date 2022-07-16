@@ -11,10 +11,37 @@
     */
 
     //ENTRADA
-
+    const numero = parseInt(prompt("Informe um numero inteiro menor que 1000"))
 
     //PROCESSAMENTO
-
+    let mensagem = ``
+    if (numero < 1000) {
+        const centena = Math.floor(numero / 100)
+        const dezena = Math.floor(numero / 10) - (centena * 10)
+        const unidade = numero - Math.floor(numero / 10) * 10
+        
+        if (centena > 0){ 
+            mensagem += `${centena} centena`
+            if (centena > 1) mensagem += `s`
+            if (dezena > 0 || unidade > 0) {
+                if (dezena > 0 && unidade > 0) mensagem += `, `
+                else mensagem += ` e `
+            }
+    }
+        if (dezena > 0){
+            mensagem += `${dezena} dezena`
+        if (dezena > 1) mensagem += `s`
+        if (unidade > 0) mensagem += ` e `
+}
+        if (unidade > 0){
+            mensagem += `${unidade} unidade`
+        if (unidade > 1) mensagem += `s`
+}
+        document.write(`${mensagem}`)
+    }else {
+            document.write(`Eu disse menor que 1000, bixo burro`)
+        }
+    
     
     //SAÍDA
 

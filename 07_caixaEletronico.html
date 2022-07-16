@@ -8,9 +8,29 @@
     */
    
     //ENTRADA
+    let valorSaque = parseInt(prompt("Digite o valor que deseja realizar o saque"))
+    let mensagemFinal = ``
 
     //PROCESSAMENTO
+    if (valorSaque >= 10 && valorSaque <= 600) {
+        const notaCem = Math.floor(valorSaque / 100)
+        valorSaque = valorSaque % 100
+        const notaCinquenta = Math.floor(valorSaque / 50)
+        valorSaque = valorSaque % 50
+        const notaDez = Math.floor(valorSaque / 10)
+        valorSaque = valorSaque % 10
+        const notaCinco = Math.floor(valorSaque / 5)
+        const notaUm = valorSaque % 5
+        
+        if (notaCem > 0) mensagemFinal += `Notas de Cem: ${notaCem}<br>`
+        if (notaCinquenta > 0) mensagemFinal += `Notas de Cem: ${notaCinquenta}<br>`
+        if (notaDez > 0) mensagemFinal += `Notas de Cem: ${notaDez}<br>`
+        if (notaCinco > 0) mensagemFinal += `Notas de Cem: ${notaCinco}<br>`
+        if (notaUm > 0) mensagemFinal += `Notas de Cem: ${notaUm}<br>`
+        document.write(`${mensagemFinal}`)
+     } else {
+        document.write(`Só é possivel fazer o saque de quantias de 10 a 600 reais`)
+    }
 
     //SAÍDA
-
     </script>

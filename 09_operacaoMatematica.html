@@ -12,13 +12,83 @@
     const numero2 = Number(prompt("Informe o segundo numero"))
     const operacao = (prompt("Informe a operacao que deseja realizar com +(adicao), -(subtracao), *(multiplicacao) e /(divisao)"))
     
-    const adicao = numero1 + numero2
-    const subtracao = numero1 - numero2
-    const multiplicacao = numero1 * numero2
-    const divisao = numero1 / numero2
+    let calculo
 
     //PROCESSAMENTO
-    a
+    if (operacao === `+`) {
+        let calculo = numero1 + numero2
+
+        if (calculo % 2 == 0){
+            document.write(`E par<br>`)
+        } else { document.write(`E impar<br>`)}
+
+        if (calculo > 0) {
+            document.write(`E positivo<br>`)
+        } else if (calculo === 0) {
+            document.write(`Nem positivo nem negativo, neutro<br>`)
+        } else {
+            document.write(`Negativo<br>`)
+        }
+        if (calculo % 1 === 0) {
+            document.write(`E inteiro`)
+        } else {
+            document.write(`E decimal`)
+        }
+    } else if (operacao === `-`) {
+        let calculo = numero1 - numero2
+
+        if (calculo % 2 == 0){
+            document.write(`E par<br>`)
+        } else { document.write(`E impar<br>`)}
+        if (calculo > 0) {
+            document.write(`E positivo<br>`)
+        } else if (calculo === 0) {
+            document.write(`Nem positivo nem negativo, neutro<br>`)
+        } else {
+            document.write(`Negativo<br>`)
+        }
+        if (calculo % 1 === 0) {
+            document.write(`E inteiro`)
+        } else {
+            document.write(`E decimal`)
+        }
+    } else if (operacao === `*`) {
+        let calculo = numero1 * numero2
+
+        if (calculo % 2 == 0){
+            document.write(`E par<br>`)
+        } else { document.write(`E impar<br>`)}
+        if (calculo > 0) {
+            document.write(`E positivo<br>`)
+        } else if (calculo === 0) {
+            document.write(`Nem positivo nem negativo, neutro<br>`)
+        } else {
+            document.write(`Negativo<br>`)
+        }
+        if (calculo % 1 === 0) {
+            document.write(`E inteiro`)
+        } else {
+            document.write(`E decimal`)
+        }
+    } else{
+        let calculo = numero1 / numero2
+
+        if (calculo % 2 == 0){
+            document.write(`E par<br>`)
+        } else { document.write(`E impar<br>`)}
+        if (calculo > 0) {
+            document.write(`E positivo<br>`)
+        } else if (calculo === 0) {
+            document.write(`Nem positivo nem negativo, neutro<br>`)
+        } else {
+            document.write(`Negativo<br>`)
+        }
+        if (calculo % 1 === 0) {
+            document.write(`E inteiro`)
+        } else {
+            document.write(`E decimal`)
+        }
+    }
 
     
     //SAÍDA
