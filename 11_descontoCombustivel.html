@@ -10,13 +10,38 @@
     - até 20 litros, desconto de 4% por litro
     - acima de 20 litros, desconto de 6% por litro
     
-    Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 6,50 o preço do litro do álcool é R$ 6,10.
+    Escreva um algoritmo que leia o número de litros vendidos, 
+    o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina),
+    calcule e imprima o valor a ser pago pelo cliente sabendo-se que
+    o preço do litro da gasolina é R$ 6,50 o preço do litro do álcool é R$ 6,10.
     */
 
     //ENTRADA
+    const combustivel = prompt("Informe o tipo de combustível com: A(alcool), G(gasolina)").toUpperCase()
+    const litros = Number(prompt("Informe quantos litros foram comprados"))
+    let desconto
+    const precoG = 6.50
+    const precoA = 6.10
 
 
     //PROCESSAMENTO
+    if (combustivel == "G") {
+        if (litros <= 20) {
+            desconto = 0.04
+            document.write(`Preco total: ${precoG + (precoG * desconto)}`)
+        } else {
+            desconto = 0.06
+            document.write(`Preco total: ${precoG + (precoG * desconto)}`)
+        }
+    } else {
+        if (litros <= 20) {
+            desconto = 0.03
+            document.write(`Preco total: ${precoA + (precoA * desconto)}`)
+        } else {
+            desconto = 0.05
+            document.write(`Preco total: ${precoA + (precoA * desconto)}`)
+        }
+    }
 
     
     //SAÍDA
