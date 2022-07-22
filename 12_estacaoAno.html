@@ -4,11 +4,43 @@
     Faça um script que pergunte para a pessoa em qual hemisfério ela está e qual o mês atual.
     De acordo com as respostas, informe qual a estação do ano correspondente.
     */
+    /*botei o começo das estações um mes depois pq eles começam pelo dia 20,
+    outono 21/22 de março no hemisfério sul e 22/23 de setembro no norte
+    verão em 21 de dezembro no hemisfério sul e 21 de junho no norte
+    janeiro, fevereiro, março, abril, maio, junho, julho, agosto, setembro, outubro, novembro e dezembro.
+    */
 
     //ENTRADA
+    const hemisferio = prompt("Indique em qual hemisferio esta, Sul ou Norte:").toUpperCase()
+    const mes = Number(prompt("Indique em qual mes esta em forma de numero: 1(janeiro), 12(dezembro)"))
 
 
     //PROCESSAMENTO
+    if (mes > 9){
+        if (hemisferio == "SUL"){
+            document.write(`Primavera`)
+        } else {
+            document.write(`Outono`)
+        }
+    }else if (mes > 6){
+        if (hemisferio == "SUL"){
+            document.write(`Inverno`)
+        } else {
+            document.write(`Verao`)
+        }
+    }else if (mes > 3){
+        if (hemisferio == "SUL"){
+            document.write(`Outono`)
+        } else {
+            document.write(`Primavera`)
+        }
+    } else{
+        if (hemisferio == "SUL"){
+            document.write(`Verao`)
+        } else {
+            document.write(`Inverno`)
+        }
+    }
 
     
     //SAÍDA
